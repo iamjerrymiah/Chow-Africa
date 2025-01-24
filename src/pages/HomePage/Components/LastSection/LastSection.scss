@@ -1,0 +1,88 @@
+@use '../../../../style/mixins' as *;
+
+.call-to-action {
+    @include flexboxz(row, space-between, center);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin-bottom: 80px;
+    border: 1px solid #EDEFFC;
+    border-radius: 14px;
+
+    @include tablet {
+        flex-direction: column;
+        gap: 2rem;        
+        padding: 30px;
+        justify-content: flex-start;
+    }
+
+    .text-section {
+        width: 50%;
+        display: flex;
+        justify-content: flex-start;
+        font-size: 24px;
+        font-weight: 700;
+        flex-wrap: wrap;
+        gap: 0.3rem;
+        color: #353542;
+        padding-right: 220px;
+
+        @include tablet {
+            width: 100%;
+            padding: 0px ;
+        }
+
+        .last-goodbye {
+            font-family: 'Sofia Sans', sans-serif;
+            font-weight: 400;
+            color: #FFF;
+            padding: 1.5px 10px;
+            background-color: #000;
+            border: 2px solid #009F79;
+            border-radius: 40px;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .last-chow-africa {
+            background-color: #5F63E1;
+            text-align: center;
+            padding: 1.5px 10px;
+            color: #FFF;
+            border: 2px solid #000;
+            border-radius: 40px;
+            font-family: 'Sofia Sans', sans-serif;
+            font-weight: 400;
+            justify-content: center;
+        }
+    }
+
+    .button-section {
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+
+        @include tablet {
+            width: 100%;
+            justify-content: flex-start;
+        }
+
+        .last-button {
+            background-color: #009F79;
+            color: #E9EBEA;
+            width: 200px;
+            padding: 0.8rem 0px;
+            border: 2px solid #FFF;
+            border-radius: 56px;
+            font-size: 16px;
+            font-family: 'Sofia Sans', sans-serif;
+            text-transform: uppercase;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.3s;
+    
+            &:hover {
+              background-color: #0f9b72;
+            }
+        }
+    }
+}

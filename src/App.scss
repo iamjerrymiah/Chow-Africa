@@ -1,0 +1,14 @@
+@use './style/mixins' as m;
+@import url('https://fonts.googleapis.com/css2?family=Pangram&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans&display=swap');
+
+body {
+    font-family: 'Pangram', sans-serif;
+}
+
+.container {
+    max-width: 123rem !important;
+    width: auto;
+    padding-left: 1.2rem !important;
+    padding-right: 1.2rem !important;
+}

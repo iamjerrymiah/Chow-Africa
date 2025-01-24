@@ -1,0 +1,288 @@
+@use '../../../../style/mixins' as *;
+
+.hero-section {
+    background: url("../../../../assets/Img/hero-background.png") no-repeat center center;
+    background-size: cover;
+    background-color: #0E0E0E;
+    color: white;
+    padding-top: 100px;
+    padding-bottom: 15px;
+    margin-top: 30px;
+    border-radius: 15px;
+
+    @include tabletS {
+        border-radius: 7px;
+    }
+  
+    .hero-content {
+      text-align: center;
+  
+      .tagline {
+        font-size: 15px;
+        font-weight: 200;
+        text-transform: uppercase;
+
+        @include tabletS {
+            font-size: 10px;
+        }
+      }
+
+      .title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        font-size: 60px;
+        font-weight: bold;
+        margin-top: -10px;
+
+        @include tabletS {
+            font-size: 15px;
+        }
+      
+        .highlight-image {
+          margin-left: 0.5rem;
+          height: 80px;
+          width: 200px; 
+
+            @include tabletS {
+                height: 40px;
+                width: 100px;
+            }
+        }
+
+      }
+  
+      .subtitle {
+        font-size: 16px;
+        font-weight: 200;
+        font-family: 'Sofia Sans', sans-serif;
+        margin-top: -30px;
+        padding: 0px 400px;
+
+        @include tablet {
+            padding: 0px 100px;
+            margin-top: -20px;
+        }
+        
+        @include tabletS {
+            font-size: 14px;
+            padding: 0px 10px;
+            margin-top: -10px;
+        }
+      }
+  
+      .waitlist-form {
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;
+
+        @include tabletS {
+            padding: 0px 10px;
+        }
+  
+        .email-input {
+          padding: 0.8rem 1rem;
+          border: 1px solid #D6DAD9;
+          border-radius: 12px;
+          font-size: 1rem;
+          width: 300px;
+          margin-right: 20px;
+          background-color: #F2F3F7;
+
+          @include tabletS {
+                width: 300px;
+                margin-bottom: 20px;
+            }
+        }
+  
+        .join-button {
+          background-color: #009F79;
+          color: #E9EBEA;
+          width: 200px;
+          padding: 0.8rem 0px;
+          border: 2px solid #FFF;
+          border-radius: 56px;
+          font-size: 16px;
+          font-family: 'Sofia Sans', sans-serif;
+          text-transform: uppercase;
+          font-weight: 700;
+          cursor: pointer;
+          transition: background-color 0.3s;
+  
+          &:hover {
+            background-color: #0f9b72;
+          }
+        }
+      }
+    }
+  
+    .hero-images {
+        width: 1220px;
+        // display: flex;
+        margin-top: 150px;
+
+        @include tabletS {
+            margin-top: 100px;
+        }
+    
+        .dish-cards {
+          max-width: 100%;
+          display: flex;
+          gap: 10px;
+          overflow-x: auto;
+          scroll-behavior: smooth;
+    
+          &::-webkit-scrollbar {
+            display: none; // Hides scrollbar for a cleaner look
+          }
+    
+          .card {
+            border: 0.58px solid #EDEFFC;
+            border-radius: 14px;
+            background-color: #FFFFFF;
+            height: 310px;
+            width: 240px;
+            min-width: 240px;
+            text-align: center;
+            flex-shrink: 0;
+            padding: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+
+            .img-cover {
+                background-color: #F4F3E8;
+                width: 240px;
+                align-items: center;
+                justify-content: center;
+                padding: 30px 0px;
+                border-radius: 30px;
+            }
+    
+            img {
+              object-fit: contain;
+              width: 120px;
+              height: 120px;
+            }
+    
+            .card-info {
+              padding: 5px;
+              align-items: flex-start;
+              text-align: start;
+    
+              .p-head {
+                font-weight: 700;
+                font-size: 14px;
+                color: #3C3937;
+              }
+    
+              .category-badge {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                font-family: 'Arial', sans-serif;
+                font-size: 0.9rem;
+                color: #666;
+              
+                .badge {
+                  display: inline-flex;
+                  align-items: center;
+                  background-color: #D6D5CA;
+                  padding: 0.6rem 0.6rem;
+                  border-radius: 13px;
+                  font-size: 0.9rem;
+                  color: #49280F;
+              
+                  .badge-icon {
+                    width: 12px;
+                    height: 12px;
+                    margin-right: 0.4rem;
+                  }
+              
+                  .badge-text {
+                    text-transform: uppercase;
+                  }
+                }
+              
+                .details {
+                  display: flex;
+                  align-items: center;
+                  margin-top: 0.8rem;
+                  color: #858786;
+                  font-size: 12px;
+              
+                  .picks {
+                    display: inline-flex;
+                    align-items: center;
+              
+                    .icon-like {
+                      content: '';
+                      display: inline-block;
+                      background-size: cover;
+                      width: 16px;
+                      height: 16px;
+                      margin-right: 0.2rem;
+                    }
+                  }
+              
+                  .separator {
+                    margin: 0 0.5rem;
+                    color: #858786;
+                  }
+              
+                  .price {
+                    // font-weight: bold;
+                  }
+                }
+              }
+            }
+          }
+
+        }
+    
+      }
+    
+      @include tablet {
+        .hero-content {
+          .title {
+            font-size: 2.5rem;
+          }
+    
+          .subtitle {
+            font-size: 1rem;
+          }
+        }
+    
+        .hero-images {
+          flex-direction: column;
+          width: 640px;
+    
+          .mobile-preview {
+            img {
+              width: 250px;
+            }
+          }
+        }
+      }
+    
+      @include tabletS {
+        .hero-images {
+          flex-direction: column;
+          width: 100%;
+    
+          .dish-cards {
+            gap: 1rem;
+    
+            .card {
+              width: 150px;
+            }
+          }
+    
+          .mobile-preview {
+            img {
+              width: 200px;
+            }
+          }
+        }
+      }
+    }

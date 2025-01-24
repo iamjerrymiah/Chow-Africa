@@ -1,0 +1,106 @@
+@use '../../style/mixins' as *;
+
+.nav {
+	display: flex;
+	flex-direction: column;
+	background-color: #fff;
+	padding-left: 30px;
+	padding-top: 50px;
+	width: 200px;
+	position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    overflow-y: auto;
+    z-index: 99;
+
+	@include tablet {
+		width: 120px;
+	}
+  
+	ul {
+	  list-style: none;
+	  margin: 0;
+	  padding-left: 20px;
+	  display: flex;
+	  flex-direction: column;
+	  gap: 20px;
+	  color: #353542;
+	  font-weight: 500;
+	  font-family: 'Sofia Sans', sans-serif;
+
+	  .li-normal {
+		padding-left: 20px;
+		cursor: pointer;
+
+		&:hover {
+			color: #D87023;
+		}
+	  }
+	  .active {
+		border-left: 4px solid #D87023;
+	}
+
+	  @include tablet {
+		padding-left: 0;
+	  }
+	}
+  
+	.logo {
+	  font-size: 1.5rem;
+	  font-weight: bold;
+	  margin-bottom: 50px;
+	  padding-left: 25px;
+
+	  @include tablet {
+		padding-left: 0;
+	  }
+	}
+  
+	&.desktop {
+	  height: 100vh;
+	  top: 0;
+	  left: 0;
+	}
+  
+	&.mobile {
+	  display: none;
+	  position: sticky;
+	  top: 0;
+	  left: 0;
+	  width: 100%;
+	  height: 100%;
+	  background: white;
+	  z-index: 20;
+  
+	  &.open {
+		display: flex;
+	  }
+	}
+  
+	.closeMenu {
+	  display: none;
+	  background: none;
+	  border: none;
+	  font-size: 1.5rem;
+	  margin-top: auto;
+	  cursor: pointer;
+  
+	  @include phone {
+		display: block;
+	  }
+	}
+
+	.social{
+		margin-top: 25px;
+		display: flex;
+		flex-direction: row;
+		gap: 0.3rem;
+		padding-left: 40px;
+		color: #F7ECE4;
+
+		@include tablet {
+			padding-left: 20px;
+		}
+	}
+  }

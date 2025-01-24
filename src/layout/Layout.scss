@@ -1,0 +1,21 @@
+@use '../style/mixins' as *;
+
+.layout {
+	display: flex;
+	min-height: 100vh;
+  
+	.mainContent {
+	  flex: 1;
+	  margin-left: 230px;
+  
+	  @include tablet {
+		margin-left: 150px;
+	  }
+	  @include tabletS {
+		margin-left: 0px;
+	  }
+	}
+	@include tabletS {
+		flex-direction: column;
+	}
+  }

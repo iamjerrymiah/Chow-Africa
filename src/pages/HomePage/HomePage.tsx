@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { HeroSection } from "./Components/HeroSection/HeroSection";
 import { Helmet } from "react-helmet";
 import AnimateRoute from "../../components/AnimateRoute";
@@ -9,7 +9,7 @@ const HomePageMain = ({isMobile}: {isMobile:boolean}) => {
     
     return (
         <>
-            <HeroSection isMobile={isMobile}/>
+            <HeroSection />
             <ChowEveryday isMobile={isMobile}/>
             <LastSection />
         </>

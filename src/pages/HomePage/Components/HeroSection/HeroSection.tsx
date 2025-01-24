@@ -10,9 +10,7 @@ import naijaSpecialImg from '../../../../assets/Img/specialrice&shrimp.png'
 
 import './HeroSection.scss'
 
-interface IHeroSectionProps {
-    isMobile: boolean;
-};
+interface IHeroSectionProps {};
 
 const CardArray = [
     { name: "Pasta, Green Sauce & Kpomo", img: pastaImg },
@@ -22,7 +20,7 @@ const CardArray = [
     { name: "Souse Fries & Bacon", img: friedRiceImg },
 ]
 
-export const HeroSection: FC<IHeroSectionProps> = ({ isMobile }) => {
+export const HeroSection: FC<IHeroSectionProps> = () => {
     const carouselRef = useRef<HTMLDivElement>(null);
   
     useEffect(() => {

@@ -198,6 +198,10 @@
                 position: absolute;
                 top: 100px;
                 right: -20px;
+
+                @include tabletS {
+                    top: 40px;
+                }
             }
 
             .left-floater-1 {
